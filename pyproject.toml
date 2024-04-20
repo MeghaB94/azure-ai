@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "azure-ai"
+version = "0.1.0"
+description = ""
+authors = ["MeghaB94 <56770049+MeghaB94@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+dash = "==2.16.1"
+
+[tool.poetry.group.azure.dependencies]
+azure-cognitiveservices-speech = "=1.37.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
