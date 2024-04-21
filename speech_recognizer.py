@@ -42,9 +42,12 @@ class SpeechRecognizer:
     def start_converting(self):
         if self.is_converting:
             return
+        print("speech to text conversion starting")
         self.is_converting = True
         self.speech_text = []
-        # speech_recognizer.recognizing.connect(lambda evt: print('RECOGNIZING: {}'.format(evt)))
+        # self.speech_recognizer.recognizing.connect(
+        #     lambda evt: self._update_partial_text_event(evt)
+        # )
         self.speech_recognizer.recognized.connect(
             lambda evt: self._update_recognized_text(evt)
         )
